@@ -3,7 +3,7 @@ import { FAQPage } from '../components/Pages'
 export const Route = createFileRoute('/faq')({
   head: () => ({
     meta: [
-      { title: 'Frequently Asked Questions | Garden State Surplus Recovery' },
+      { title: 'Frequently Asked Questions | Surplus Recovery Partners' },
       {
         name: 'description',
         content:

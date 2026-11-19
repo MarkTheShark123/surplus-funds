@@ -3,7 +3,7 @@ import { ContactPage } from '../components/Pages'
 export const Route = createFileRoute('/contact')({
   head: () => ({
     meta: [
-      { title: 'Check Your Eligibility | Garden State Surplus Recovery' },
+      { title: 'Check Your Eligibility | Surplus Recovery Partners' },
       {
         name: 'description',
         content:

@@ -26,6 +26,8 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
   const [errors, setErrors] = useState<Errors>({})
   const [complete, setComplete] = useState(false)
   const [ready, setReady] = useState(false)
+  const [sending, setSending] = useState(false)
+  const [submitError, setSubmitError] = useState('')
   const successRef = useRef<HTMLDivElement>(null)
   useEffect(() => {
     setReady(true)
@@ -34,7 +36,7 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
     setFields((current) => ({ ...current, [key]: value }))
     setErrors((current) => ({ ...current, [key]: undefined }))
   }
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
     const next: Errors = {}
     if (fields.name.trim().length < 2)
@@ -50,16 +52,32 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
     if (fields.address.trim().length < 10)
       next.address = 'Please include the street, city, state, and ZIP code.'
     if (!fields.consent)
-      next.consent = 'Please confirm you understand this is a sample form.'
+      next.consent = 'Please confirm that we may contact you about your inquiry.'
     setErrors(next)
     if (Object.keys(next).length) {
       const first = Object.keys(next)[0]
       document.getElementById(`${prefix}-${first}`)?.focus()
       return
     }
-    setComplete(true)
-    setFields(initial)
-    requestAnimationFrame(() => successRef.current?.focus())
+    setSending(true)
+    setSubmitError('')
+    try {
+      const data = new URLSearchParams({
+        'form-name': 'surplus-inquiry',
+        name: fields.name.trim(), email: fields.email.trim(),
+        phone: fields.phone.trim(), address: fields.address.trim(),
+        relationship: fields.relationship, consent: 'yes',
+      })
+      const response = await fetch('/netlify-form.html', {
+        method: 'POST', headers: { 'Content-Type': 'application/x-www-form-urlencoded' }, body: data.toString(),
+      })
+      if (!response.ok) throw new Error('Submission failed')
+      setComplete(true)
+      setFields(initial)
+      requestAnimationFrame(() => successRef.current?.focus())
+    } catch {
+      setSubmitError('We could not send your inquiry. Please email us at maquentzel@gmail.com or call (201) 937-9270.')
+    } finally { setSending(false) }
   }
   if (complete)
     return (
@@ -72,14 +90,12 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
         <span className="success-icon">
           <Icon name="check" size={30} />
         </span>
-        <div className="eyebrow">SAMPLE FORM COMPLETE</div>
+        <div className="eyebrow">INQUIRY SENT</div>
         <h3>You’ve taken the first step.</h3>
         <p>
-          In the finished website, this is where your inquiry would be
-          confirmed. This demo has not sent or saved your details, checked
-          property records, or determined your eligibility.
+          Your inquiry was submitted to our website form service. We will review it and follow up. This does not confirm eligibility or guarantee recovery.
         </p>
-        <p className="success-note">No follow-up has been scheduled.</p>
+        <p className="success-note">If your matter is urgent, call (201) 937-9270.</p>
         <button
           className="button button-navy"
           onClick={() => {
@@ -89,7 +105,7 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
             )
           }}
         >
-          Try the form again
+          Send another inquiry
           <Icon name="arrow" size={18} />
         </button>
       </div>
@@ -99,22 +115,21 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
       className={`eligibility-form ${compact ? 'form-compact' : ''}`}
       onSubmit={handleSubmit}
       noValidate
-      aria-label="Sample eligibility inquiry"
+      aria-label="Surplus funds inquiry"
       autoComplete="off"
     >
-      {/* Inputs intentionally have no name attributes: native submission cannot include sample details. */}
+
       <noscript>
         <p className="field-error">
-          Enable JavaScript to try this sample form. No information has been
-          submitted.
+          Enable JavaScript to send this inquiry, or contact us by phone.
         </p>
       </noscript>
       <div className="form-heading">
         <span className="small-label">LET’S START WITH THE BASICS</span>
-        <span className="sample-pill">Sample form</span>
+
       </div>
       <p className="form-instruction">
-        Use sample details. Nothing is sent or saved.
+        Share your contact information and former property address. We’ll follow up about your inquiry.
       </p>
       <div className="form-grid">
         <div className="field">
@@ -244,8 +259,7 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
             }
           />
           <span>
-            I understand this is a prototype. My details will not be sent or
-            saved, and no one will contact me.
+            I agree to be contacted about this inquiry by phone or email. This is not an agreement to hire anyone.
           </span>
         </label>
         {errors.consent && (
@@ -254,19 +268,20 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
           </span>
         )}
       </div>
+      {submitError && <p className="field-error" role="alert">{submitError}</p>}
       <button
         className="button button-green form-submit"
         type="submit"
-        disabled={!ready}
+        disabled={!ready || sending}
       >
-        Check your eligibility <Icon name="arrow" size={19} />
+        {sending ? 'Sending…' : 'Request a case review'} <Icon name="arrow" size={19} />
       </button>
       <div className="form-footnote">
         <Icon name="lock" size={14} />
         <span>
-          Demo only. No eligibility decision is made.{' '}
+          Submitting does not confirm eligibility or create an attorney-client relationship.{' '}
           <Link to="/contact" hash="prototype-privacy">
-            Privacy notice
+            Privacy information
           </Link>
         </span>
       </div>

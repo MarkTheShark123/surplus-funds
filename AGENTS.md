@@ -1,6 +1,6 @@
-# Garden State Surplus Recovery
+# Surplus Recovery Partners
 
-This is a five-page, client-interactive marketing prototype for a New Jersey foreclosure surplus recovery company. The working brand is Garden State Surplus Recovery. The user has not approved public publishing or a custom domain. Do not deploy publicly, connect a domain, or activate live inquiry handling without approval.
+This is a five-page, client-interactive marketing prototype for a New Jersey foreclosure surplus recovery company. The working brand is Surplus Recovery Partners. The user has not approved public publishing or a custom domain. Do not deploy publicly, connect a domain, or activate live inquiry handling without approval.
 
 ## Architecture
 

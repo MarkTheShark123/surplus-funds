@@ -3,7 +3,7 @@ import { AboutPage } from '../components/Pages'
 export const Route = createFileRoute('/about')({
   head: () => ({
     meta: [
-      { title: 'About Us | Garden State Surplus Recovery' },
+      { title: 'About Us | Surplus Recovery Partners' },
       {
         name: 'description',
         content:

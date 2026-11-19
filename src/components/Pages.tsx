@@ -41,17 +41,13 @@ export function HomePage() {
               NEW JERSEY HOMEOWNER ASSISTANCE
             </div>
             <h1>
-              The sale is over.
-              <br />
-              Your story <em>isn’t.</em>
+              Your foreclosed home may have left <em>money behind.</em>
             </h1>
             <p className="hero-description">
-              Your former home may have sold for more than what was owed. If
-              funds remain, you may be entitled to a new beginning.
+              If your New Jersey property sold at foreclosure, there may be surplus funds available to claim. We help you understand the process and your options.
             </p>
             <p className="hero-support">
-              We help New Jersey homeowners understand foreclosure surplus funds
-              and explore their path forward.
+              A personal, straightforward approach from Mark, founder of Surplus Recovery Partners.
             </p>
             <div className="hero-actions">
               <EligibilityLink />
@@ -106,6 +102,39 @@ export function HomePage() {
             <Icon name="shield" />
             <span>No pressure to move forward</span>
           </div>
+        </div>
+      </section>
+      <section className="section founder-feature" aria-labelledby="meet-founder">
+        <div className="container founder-grid">
+          <img className="founder-photo" src="/mark-founder.png" alt="Mark, founder of Surplus Recovery Partners" loading="lazy" />
+          <div>
+            <div className="eyebrow">A REAL PERSON BEHIND THE WORK</div>
+            <h2 id="meet-founder">Hi, I’m Mark.</h2>
+            <p><strong>Founder, Surplus Recovery Partners</strong></p>
+            <p>I started this company because people deserve a fair opportunity to recover money that belongs to them.</p>
+            <p>After foreclosure, many people don't know surplus funds may exist—or how to claim them. My goal is to make the process clear, treat people fairly, and keep fees reasonable.</p>
+            <p><strong>Have questions about a letter or call from me?</strong> You can speak with me directly.</p>
+            <a className="button button-green" href="tel:+12019379270">Call Mark: (201) 937-9270</a>
+          </div>
+        </div>
+      </section>
+      <section className="section" aria-labelledby="our-commitment">
+        <div className="container">
+          <div className="eyebrow">WHAT YOU CAN EXPECT</div>
+          <h2 id="our-commitment">Straight answers and fair treatment.</h2>
+          <p><strong>Talk directly with Mark.</strong> Ask questions and get a clear explanation of your potential claim.</p>
+          <p><strong>Understand the fees.</strong> We'll explain the proposed costs and agreement before you decide whether to move forward.</p>
+          <p><strong>Make your own decision.</strong> There's no pressure to sign. You can pursue a claim yourself or work with an attorney of your choosing.</p>
+          <Link to="/contact" className="text-link">Ask Mark a question <Icon name="arrow" size={17} /></Link>
+        </div>
+      </section>
+      <section className="section fees-feature">
+        <div className="container">
+          <div className="eyebrow">TRANSPARENT PRICING</div>
+          <h2>Know the fee before you decide.</h2>
+          <p>Our proposed recovery fee generally ranges from <strong>7% to 20%</strong> of recovered funds, depending on the claim. Some recovery services advertise fees as high as 35%; we believe people should keep more of their money. The exact fee, any attorney involvement, and all terms will be explained in writing before you agree to proceed. Fee arrangements are subject to applicable law and professional review.</p>
+          <p>You can also explore claiming funds independently or consult an attorney of your choosing. Recovery is not guaranteed.</p>
+          <Link to="/contact" className="text-link">Ask Mark a question <Icon name="arrow" size={17}/></Link>
         </div>
       </section>
       <section className="section understanding">
@@ -220,7 +249,7 @@ export function HomePage() {
             <div className="eligibility-disclaimer">
               <Icon name="info" size={20} />
               <p>
-                This is a visual prototype. Try the form with sample details. It
+                Send an inquiry using the form. It
                 does not search records, determine eligibility, or send an
                 inquiry.
               </p>
@@ -293,7 +322,7 @@ export function HowItWorksPage() {
                       [
                         'Gather the former property address and any sale information you already have.',
                         'Let a prospective service know whether you are the former owner, an heir, or a representative.',
-                        'Use sample information when trying the form on this prototype.',
+                        'You can contact us to ask about a potential claim.',
                       ],
                       [
                         'Confirm whether sale proceeds remain after debts, valid claims, and approved costs.',
@@ -402,15 +431,10 @@ export function AboutPage() {
               <em>Clear information, always.</em>
             </h2>
             <p>
-              Garden State Surplus Recovery is the working name for a New Jersey
-              foreclosure surplus assistance company. This prototype presents
-              its intended focus: helping former homeowners understand potential
-              excess proceeds and the recovery process.
+              Surplus Recovery Partners helps former New Jersey homeowners understand potential surplus funds and their recovery options.
             </p>
             <p>
-              The approach starts with listening, explaining the available
-              information in plain language, and giving people the space to
-              decide what is right for them.
+              My approach is simple: be straightforward, explain the options clearly, and treat people’s money with respect. I believe recovery fees should be fair and transparent, especially after a difficult experience like foreclosure.
             </p>
             <div className="about-value">
               <Icon name="chat" />
@@ -457,15 +481,15 @@ export function AboutPage() {
           <dl className="verification-list">
             <div>
               <dt>Legal company name & business registration</dt>
-              <dd>Pending verification</dd>
+              <dd>To be confirmed before launch</dd>
             </div>
             <div>
-              <dt>Business address & contact information</dt>
-              <dd>Pending verification</dd>
+              <dt>Contact information</dt>
+              <dd>To be confirmed before launch</dd>
             </div>
             <div>
               <dt>Team biographies & professional experience</dt>
-              <dd>Pending verification</dd>
+              <dd>To be confirmed before launch</dd>
             </div>
             <div>
               <dt>Attorney involvement & credentials</dt>
@@ -509,7 +533,7 @@ export function FAQPage() {
             <div>
               <h3>Your situation may have its own questions.</h3>
               <p>
-                Explore the sample inquiry form, or contact the court or an
+                Send us an inquiry, or contact the court or an
                 independent attorney for case-specific guidance.
               </p>
             </div>
@@ -555,7 +579,7 @@ export function ContactPage() {
               figure it all out today.
             </h2>
             <p>
-              Use the sample form to explore how an initial inquiry would work.
+              Send us a few details to request a conversation.
               You don’t need a case number or court documents to try it.
             </p>
             <div className="contact-detail">
@@ -599,9 +623,7 @@ export function ContactPage() {
             <div className="contact-note">
               <Icon name="info" size={21} />
               <p>
-                This prototype does not accept inquiries or arrange
-                consultations. For questions about a current case or deadline,
-                contact the court or independent legal counsel.
+                You can submit an inquiry or contact Mark directly. For urgent court deadlines, contact the court or independent legal counsel.
               </p>
             </div>
           </div>
@@ -615,26 +637,11 @@ export function ContactPage() {
         </div>
       </section>
       <section className="privacy-section" id="prototype-privacy">
-        <div className="container privacy-inner">
-          <Icon name="lock" size={25} />
-          <div>
-            <h2>About your information in this prototype</h2>
-            <p>
-              The sample form processes entries only in the page while you use
-              it. It does not send form entries to a server, save them, search
-              property records, or arrange follow-up. Enter sample details only.
-              Do not include financial information, identification documents,
-              Social Security numbers, or sensitive case records.
-            </p>
-            <p>
-              A complete company privacy policy, verified contact details,
-              consent language, and service and fee disclosures must be reviewed
-              before a live inquiry service is enabled. Hosting providers may
-              process ordinary technical request information separately from
-              this sample form.
-            </p>
-          </div>
-        </div>
+        <div className="container privacy-inner"><Icon name="lock" size={25}/><div>
+          <h2>How we use your information</h2>
+          <p>Information you submit is used to review your inquiry and contact you about potential surplus funds. Form entries are processed through our website hosting provider, Netlify, and notifications are intended for our team. Do not submit Social Security numbers, banking details, or identity documents through this form.</p>
+          <p>Submitting a form does not establish an attorney-client relationship, confirm eligibility, or guarantee recovery. You may contact the court or seek independent legal advice.</p>
+        </div></div>
       </section>
     </SiteLayout>
   )

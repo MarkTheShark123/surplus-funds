@@ -27,19 +27,19 @@ export const faqs = [
     category: 'Fees & representation',
     question: 'What does your service cost?',
     answer:
-      'Fees, payment terms, and any expenses have not been verified for this prototype. No fee structure or “no recovery, no fee” arrangement is being offered here. Before choosing a service, request the full written agreement and fee disclosures and review them carefully.',
+      'Proposed fees generally range from 7% to 20%, depending on the claim. Any final fee terms and expenses must be confirmed in writing and comply with applicable law. Before choosing a service, request the full written agreement and fee disclosures and review them carefully.',
   },
   {
     category: 'The recovery process',
     question: 'What documents might I need?',
     answer:
-      'A review may involve the former property address, foreclosure case number, sale information, proof of identity, and documents showing ownership or authority to act for an estate. Requirements vary. Do not send Social Security numbers, bank details, identification documents, or court records through this prototype.',
+      'A review may involve the former property address, foreclosure case number, sale information, proof of identity, and documents showing ownership or authority to act for an estate. Requirements vary. Do not send Social Security numbers, bank details, identification documents, or court records through this form.',
   },
   {
     category: 'Fees & representation',
     question: 'Are you a law firm or affiliated with the court?',
     answer:
-      'No law-firm status, attorney credentials, or court affiliation is represented in this prototype. Any attorney involvement and professional credentials must be verified before launch. This website provides general information and does not create an attorney-client relationship.',
+      'No law-firm status, attorney credentials, or court affiliation is represented on this website. Any attorney involvement and professional credentials must be verified before launch. This website provides general information and does not create an attorney-client relationship.',
   },
   {
     category: 'Understanding surplus',
@@ -57,6 +57,6 @@ export const faqs = [
     category: 'Fees & representation',
     question: 'Does submitting the form guarantee a recovery?',
     answer:
-      'No. An inquiry does not establish eligibility, confirm that surplus funds exist, or guarantee a recovery. This prototype only demonstrates the form experience. It does not send an inquiry, search records, engage a service, or arrange a follow-up.',
+      'No. An inquiry does not establish eligibility, confirm that surplus funds exist, or guarantee a recovery. Submitting an inquiry does not search court records automatically, engage a service, or establish legal representation.',
   },
 ]

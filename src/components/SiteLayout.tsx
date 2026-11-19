@@ -15,7 +15,7 @@ export function Brand({ light = false }: { light?: boolean }) {
     <Link
       to="/"
       className={`brand ${light ? 'brand-light' : ''}`}
-      aria-label="Garden State Surplus Recovery home"
+      aria-label="Surplus Recovery Partners home"
     >
       <span className="brand-mark">
         <svg viewBox="0 0 44 46" fill="none" aria-hidden="true">
@@ -36,8 +36,8 @@ export function Brand({ light = false }: { light?: boolean }) {
         </svg>
       </span>
       <span>
-        <span className="brand-name">Garden State</span>
-        <span className="brand-subtitle">SURPLUS RECOVERY</span>
+        <span className="brand-name">Surplus Recovery</span>
+        <span className="brand-subtitle">PARTNERS</span>
       </span>
     </Link>
   )
@@ -185,13 +185,10 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <EligibilityLink className="footer-eligibility" />
             </div>
           </div>
-          <div className="footer-disclosures">
-            <span className="prototype-tag">VISUAL PROTOTYPE</span>
+          <div className="footer-disclosures"><p>Contact Mark: <a href="mailto:maquentzel@gmail.com">maquentzel@gmail.com</a> · <a href="tel:+12019379270">(201) 937-9270</a></p>
+            
             <p>
-              Garden State Surplus Recovery is a working company name. Legal
-              business name, business address, contact details, attorney
-              involvement and credentials, and all fee disclosures are pending
-              verification. This prototype does not accept inquiries.
+              Surplus Recovery Partners is a working brand. Legal business registration, attorney involvement, and fee terms require verification before launch. Inquiries do not establish legal representation.
             </p>
             <p>
               General information only; not legal advice. No attorney-client
@@ -203,11 +200,11 @@ export function SiteLayout({ children }: { children: ReactNode }) {
           </div>
           <div className="footer-bottom">
             <span>
-              © {new Date().getFullYear()} Garden State Surplus Recovery.
-              Working brand.
+              © {new Date().getFullYear()} Surplus Recovery Partners.
+              
             </span>
             <Link to="/contact" hash="prototype-privacy">
-              Prototype privacy notice <Icon name="arrow-up" size={13} />
+              Privacy information <Icon name="arrow-up" size={13} />
             </Link>
           </div>
         </div>

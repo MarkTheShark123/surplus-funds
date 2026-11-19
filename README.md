@@ -1,6 +1,6 @@
-# Garden State Surplus Recovery prototype
+# Surplus Recovery Partners prototype
 
-A responsive, five-page website concept for a New Jersey foreclosure surplus recovery company. Garden State Surplus Recovery is a working brand; the company’s identity, contact details, professional credentials, attorney involvement, and fee disclosures remain subject to verification.
+A responsive, five-page website concept for a New Jersey foreclosure surplus recovery company. Surplus Recovery Partners is a working brand; the company’s identity, contact details, professional credentials, attorney involvement, and fee disclosures remain subject to verification.
 
 The site includes Home, How It Works, About Us, FAQ, and Contact pages, with a sample eligibility form on Home and Contact. Forms validate name, email, US phone number, property address, and the prototype acknowledgment, then show a clearly labeled demo confirmation. No form entries are transmitted or persisted, no records are searched, and no eligibility decision is made. FAQ categories and accordions, mobile navigation, and page links work in the prototype.
 
