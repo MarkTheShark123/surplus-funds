@@ -76,7 +76,7 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
       setFields(initial)
       requestAnimationFrame(() => successRef.current?.focus())
     } catch {
-      setSubmitError('We could not send your inquiry. Please email us at maquentzel@gmail.com or call (201) 937-9270.')
+      setSubmitError('We could not send your inquiry. Please email us at surplusrecoverypartners@gmail.com or call (201) 937-9270.')
     } finally { setSending(false) }
   }
   if (complete)

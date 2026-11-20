@@ -125,6 +125,15 @@ export function HomePage() {
           <p><strong>Talk directly with Mark.</strong> Ask questions and get a clear explanation of your potential claim.</p>
           <p><strong>Understand the fees.</strong> We'll explain the proposed costs and agreement before you decide whether to move forward.</p>
           <p><strong>Make your own decision.</strong> There's no pressure to sign. You can pursue a claim yourself or work with an attorney of your choosing.</p>
+          <div className="sample-stories">
+            <h3>Situations we can help you understand</h3>
+            <p className="sample-disclaimer">Fictional examples of common questions — not testimonials or actual client experiences.</p>
+            <div className="sample-stories-grid">
+              <article className="sample-story"><h4>Lisa · Former homeowner</h4><p>“I was skeptical when I first heard about surplus funds. I wanted someone to explain where the money came from, how the process worked, and what it would cost.”</p></article>
+              <article className="sample-story"><h4>Denise · Heir</h4><p>“After my mother passed, I had no idea there might still be money connected to her former home. I needed to understand what documents an heir would need to make a claim.”</p></article>
+              <article className="sample-story"><h4>James · Former homeowner</h4><p>“At first I thought an unexpected call about foreclosure money sounded too good to be true. Before moving forward, I wanted to verify the court records, understand the fees, and know exactly who would handle my case.”</p></article>
+            </div>
+          </div>
           <Link to="/contact" className="text-link">Ask Mark a question <Icon name="arrow" size={17} /></Link>
         </div>
       </section>
@@ -190,6 +199,22 @@ export function HomePage() {
               the specific case and valid claims.
             </p>
           </div>
+        </div>
+      </section>
+      <section className="section" aria-labelledby="sample-distribution">
+        <div className="container">
+          <div className="eyebrow">HOW SURPLUS FUNDS CAN WORK</div>
+          <h2 id="sample-distribution">An example with two junior liens.</h2>
+          <p>Imagine a New Jersey home sells at foreclosure for $425,000. The following simplified figures show how competing claims can reduce the amount ultimately available to the former owner.</p>
+          <div className="surplus-example">
+            <div><span>Sheriff’s sale proceeds</span><strong>$425,000</strong></div>
+            <div><span>Foreclosed first mortgage and approved sale costs</span><strong>− $275,000</strong></div>
+            <div><span>Surplus before junior claims</span><strong>$150,000</strong></div>
+            <div><span>Junior lienholder 1 — second mortgage (assumed valid claim)</span><strong>− $45,000</strong></div>
+            <div><span>Junior lienholder 2 — judgment lien (assumed valid claim)</span><strong>− $20,000</strong></div>
+            <div className="surplus-example-total"><span>Potential amount remaining for the owner</span><strong>$85,000</strong></div>
+          </div>
+          <p className="sample-disclaimer">Hypothetical example, not a real court record or a promise of recovery. The actual distribution depends on lien priority, court orders, valid claims, costs, and other circumstances. Junior lienholders do not automatically receive the amounts shown.</p>
         </div>
       </section>
       <section className="process-section section">

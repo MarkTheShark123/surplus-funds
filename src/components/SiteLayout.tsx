@@ -185,7 +185,7 @@ export function SiteLayout({ children }: { children: ReactNode }) {
               <EligibilityLink className="footer-eligibility" />
             </div>
           </div>
-          <div className="footer-disclosures"><p>Contact Mark: <a href="mailto:maquentzel@gmail.com">maquentzel@gmail.com</a> · <a href="tel:+12019379270">(201) 937-9270</a></p>
+          <div className="footer-disclosures"><p>Contact Mark: <a href="mailto:surplusrecoverypartners@gmail.com">surplusrecoverypartners@gmail.com</a> · <a href="tel:+12019379270">(201) 937-9270</a></p>
             
             <p>
               Surplus Recovery Partners is a working brand. Legal business registration, attorney involvement, and fee terms require verification before launch. Inquiries do not establish legal representation.

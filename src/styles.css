@@ -2673,3 +2673,6 @@ section[id] {
 .founder-feature .button {margin-top:10px;display:inline-flex;}
 .fees-feature {background:#fff;}
 @media(max-width:760px){.founder-grid{grid-template-columns:1fr}.founder-photo{max-width:420px;max-height:460px;margin:auto}}
+
+/* Trust-building examples and hypothetical surplus breakdown */
+.sample-stories{margin-top:2rem}.sample-stories-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1rem 0 1.5rem}.sample-story{border:1px solid #d9e1df;border-radius:12px;padding:1.2rem;background:#fafcfb}.sample-story h4{margin:0 0 .7rem}.sample-story p{margin:0}.sample-disclaimer{font-size:.88rem;color:#52636b;margin:.6rem 0 1.2rem}.surplus-example{max-width:760px;border:1px solid #d9e1df;border-radius:12px;overflow:hidden;margin:1.5rem 0}.surplus-example>div{display:flex;justify-content:space-between;gap:1.5rem;padding:1rem 1.25rem;border-bottom:1px solid #e6ebe9}.surplus-example>div:last-child{border-bottom:0}.surplus-example strong{white-space:nowrap}.surplus-example-total{background:#edf5ef;font-weight:700}@media(max-width:760px){.sample-stories-grid{grid-template-columns:1fr}.surplus-example>div{gap:.7rem;padding:.85rem}}
