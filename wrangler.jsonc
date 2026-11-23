@@ -1,0 +1,9 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "surplus-funds",
+  "main": "@tanstack/react-start/server-entry",
+  "compatibility_date": "2026-11-23",
+  "observability": {
+    "enabled": true
+  }
+}
