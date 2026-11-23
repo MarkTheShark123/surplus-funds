@@ -22,9 +22,7 @@ jobs:
           cache: pnpm
 
       - name: Update dependencies
-        run: |
-          pnpm remove @netlify/vite-plugin-tanstack-start
-          pnpm add -D @cloudflare/vite-plugin wrangler
+        run: pnpm install --no-frozen-lockfile
 
       - name: Commit changes
         run: |
