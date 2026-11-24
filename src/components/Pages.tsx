@@ -63,8 +63,7 @@ export function HomePage() {
           <div className="hero-visual">
             <div className="hero-photo">
               <img
-                src="/.netlify/images?url=/img/new-jersey-home.png&w=1040&fm=webp&q=85"
-                srcSet="/.netlify/images?url=/img/new-jersey-home.png&w=520&fm=webp&q=85 520w, /.netlify/images?url=/img/new-jersey-home.png&w=1040&fm=webp&q=85 1040w"
+                src="/img/new-jersey-home.png"
                 sizes="(max-width: 760px) 92vw, 44vw"
                 alt="A welcoming New Jersey-style home with a shaded front porch and green garden; illustrative image"
                 width="832"
