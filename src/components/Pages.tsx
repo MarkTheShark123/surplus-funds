@@ -439,7 +439,7 @@ export function AboutPage() {
         <div className="container about-grid">
           <div className="about-photo">
             <img
-              src="/.netlify/images?url=/img/new-jersey-home.png&w=840&fm=webp&q=85"
+              src="/img/new-jersey-home.png"
               alt="Sunlit front garden and porch of an illustrative New Jersey-style home"
               width="672"
               height="840"
