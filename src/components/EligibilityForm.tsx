@@ -61,8 +61,8 @@ export function EligibilityForm({ compact = false }: { compact?: boolean }) {
     }
     setSending(true)
     setSubmitError('')
-  }
-    const response = await fetch('/api/contact', {
+    try {
+      const response = await fetch('/api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
